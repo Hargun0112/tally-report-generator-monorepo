@@ -50,6 +50,7 @@ export const updateAccess = async (
 
   const { users } = req.body;
   const data : ReportUserInsert[] = [];
+  let reportUser : ReportUserSelect[] = [];
 
   users.forEach((element) => {
     data.push({
@@ -60,7 +61,7 @@ export const updateAccess = async (
   try {
     await req.services.reportUser.deleteOne({ reportId });
   } finally {
-    const reportUser = await req.services.reportUser.createMany(data);
+    if (data.length > 0) reportUser = await req.services.reportUser.createMany(data);
     return res.json({ reportUser });
   }
 };
@@ -81,13 +82,13 @@ export const updateSchedule = async (
   try {
     await req.services.schedule.findOne({ reportId });
     reportSchedule = await req.services.schedule.updateOne({ reportId },schedule);
-  } catch (e) {
+  } finally {
     reportSchedule = await req.services.schedule.createOne(schedule);
   }
 
   try {
     await req.services.scheduleUser.deleteOne({ scheduleId: reportSchedule.id });
-  } catch (e) {} finally {
+  } finally {
     const data : ScheduleUserInsert[] = [];
     users?.forEach((element) => {
       data.push({
@@ -96,7 +97,6 @@ export const updateSchedule = async (
       });
     });
     if (data.length > 0) scheduleUsers = await req.services.scheduleUser.createMany(data);
+    return res.json({ schedule: reportSchedule,users: scheduleUsers });
   }
-
-  return res.json({ schedule: reportSchedule,users: scheduleUsers });
 };
