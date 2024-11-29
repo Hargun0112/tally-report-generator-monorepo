@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "build": "dotenv -- turbo build --concurrency=13",
+    "prebuild": "dotenv -- turbo  build --filter='@trg_package/*'",
     "dev": "dotenv -- turbo dev --concurrency=13",
     "lint": "dotenv -- turbo lint --concurrency=13",
     "lint:fix": "dotenv -- turbo lint --concurrency=13 -- --fix",
@@ -22,7 +23,7 @@
     "eslint": "8.57.0",
     "prettier": "^3.3.3",
     "rimraf": "^6.0.1",
-    "turbo": "latest"
+    "turbo": "^2.3.3"
   },
   "engines": {
     "node": ">=18"
