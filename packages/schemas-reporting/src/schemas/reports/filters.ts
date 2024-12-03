@@ -1,6 +1,6 @@
 import z from 'zod';
 import { DetailedColumnSelect } from '../../types';
-import { DetailedColumnInsertSchema } from '../../types/column';
+import { DetailedColumnInsertSchema } from '../../types/Column';
 
 export const FilterOperations = {
   select: {
