@@ -11,7 +11,7 @@ const usersAxios = createAxiosClient(
   }
 );
 
-export const services = {
+export const services : { updateOne : any, deleteOne : any } = {
   updateOne: async (data: Partial<UserSelect>) => usersAxios.patch('/update', data),
   deleteOne: async () => usersAxios.delete('/delete')
 };
