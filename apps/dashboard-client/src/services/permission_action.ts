@@ -10,7 +10,7 @@ const permissionActionsAxios = createAxiosClient(
   }
 );
 
-export const services:CrudServices<
+export const services: CrudServices<
 'permissionAction',
 PermissionActionSelect,
 PermissionActionInsert,
