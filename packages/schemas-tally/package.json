@@ -29,13 +29,13 @@
   "license": "ISC",
   "dependencies": {
     "@trg_package/base-service": "*",
-    "@trg_package/errors": "*",
     "drizzle-orm": "^0.33.0",
     "drizzle-zod": "^0.5.1"
   },
   "devDependencies": {
     "@trg_package/config-typescript": "*",
     "@trg_package/eslint-config": "*",
+    "eslint-import-resolver-typescript": "^3.6.3",
     "eslint": "8.57.0",
     "tsup": "^8.2.4"
   }

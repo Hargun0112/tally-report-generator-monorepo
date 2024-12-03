@@ -64,4 +64,12 @@ export class UserService extends BaseServiceNew<
     const salt = await bcrypt.genSalt(10);
     return bcrypt.hash(password, salt);
   }
+
+  public async comparePassword(
+    password: UserSelect['password'],
+    hash: string
+  ): Promise<boolean> {
+    const doesPasswordMatch = await bcrypt.compare(password, hash);
+    return doesPasswordMatch;
+  }
 }

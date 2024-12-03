@@ -14,9 +14,9 @@
     "@tanstack/react-query": "^5.40.1",
     "@tanstack/react-table": "^8.17.3",
     "@trg_package/config-env": "*",
-    "@trg_package/errors": "*",
     "@trg_package/schemas-auth": "*",
     "@trg_package/schemas-dashboard": "*",
+    "@trg_package/schemas-reporting": "*",
     "@trg_package/vite": "*",
     "axios": "^1.7.2",
     "lucide-react": "^0.439.0",
@@ -26,13 +26,13 @@
     "react-hook-form": "^7.53.1",
     "react-router": "^6.23.0",
     "react-router-dom": "^6.23.1",
-    "uuid": "^11.0.2",
     "zod": "^3.23.8"
   },
   "devDependencies": {
     "@trg_package/config-tailwind": "*",
     "@trg_package/config-typescript": "*",
     "@trg_package/eslint-config": "*",
+    "eslint-import-resolver-typescript": "^3.6.3",
     "@types/node": "^20.12.12",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
@@ -41,7 +41,6 @@
     "autoprefixer": "^10.4.19",
     "eslint": "^8.57.0",
     "postcss": "^8.4.38",
-    "prettier": "^3.2.5",
     "tailwindcss": "^3.4.3",
     "typescript": "^5.4.5",
     "vite": "^5.4.1"

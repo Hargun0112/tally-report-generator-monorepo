@@ -22,7 +22,7 @@ import {
   ScheduleUserService
 } from '@trg_package/schemas-reporting/services';
 import { CompanyService } from '@trg_package/schemas-tally/services';
-import type { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
+import { type PostgresJsDatabase } from 'drizzle-orm/postgres-js';
 import type { Sql } from 'postgres';
 import { createClient, createUrl } from '@/models';
 import * as dashboardSchemas from '@/models/schemas';

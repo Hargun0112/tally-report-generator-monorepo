@@ -8,9 +8,9 @@
   "devDependencies": {
     "@trg_package/config-typescript": "*",
     "@trg_package/eslint-config": "*",
+    "eslint-import-resolver-typescript": "^3.6.3",
     "eslint": "8.57.0",
     "@types/node": "^20.14.2",
-    "ts-node": "^10.9.2",
     "tsup": "^8.2.4",
     "tsx": "^4.15.2",
     "typescript": "^5.4.5"

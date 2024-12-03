@@ -7,6 +7,9 @@
     "react-internal.js",
     "library.js"
   ],
+  "peerDependencies": {
+    "eslint-import-resolver-typescript": "^3.6.3"
+  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^7.1.0",
     "@typescript-eslint/parser": "^7.1.0",
@@ -15,7 +18,6 @@
     "eslint-config-airbnb-typescript": "^18.0.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-config-turbo": "^2.0.0",
-    "eslint-import-resolver-typescript": "^3.6.3",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsx-a11y": "^6.10.0",
     "eslint-plugin-only-warn": "^1.1.0",
